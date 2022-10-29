@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+img {
+    width: 10vw;
+    height: 10vh;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        display: flex;
+        background-image: url('shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg');
+        background-size: cover;       
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    body > div {
+        width: 100%;
+    }
+    
+    
+    #left #banner {
+        font-family: 'Fasthand', 'Comic Sans MS';
+        font-size: 2em;
+    }
+    
+    #validation button {
+        width: 20vw;
+        height: 10vh;
+    }
+    
+    #photoCredits {
+        position: absolute;
+        bottom: 0;
+        color: white;
+    }
+    
+    input {
+        display: block;
+        height: 5vh;
+    }
+}
+
+
+@media screen and (max-width: 1100px) and (min-width: 500px){
+    
+    body {
+        margin-top: 5vh;
+        background-image: url('shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg');
+        background-size: 150%;
+        font-size: 1.3em;
+        margin: auto;
+        color: white;
+        overflow: hidden;
+    }  
+    
+    #banner {
+        background-color: white;
+        opacity: 0.4;
+        color: black;
+        width: 100vw;
+
+    }
+    
+    #banner h3 {
+        opacity: 1;
+        display: inline-block;
+        position: relative;
+        left: 50vw;
+        margin: auto;
+    }
+    
+    button {
+        width: 12vw;
+        height: 8vh;
+        border-radius: 5px;
+        border: none;
+    }
+    
+    #form {
+        padding-left: 10vw;
+        gap: 10vh;
+        display: flex;
+    }
+    
+    img {
+        opacity: 1;
+        width: 15vw;
+        height: 15vh;
+        margin: 0;
+        padding: 0;
+        left: 0;
+    }
+    
+    input {
+        display: block;
+        height: 5vh;
+    }
+    
+    #introduction {
+        font-family: 'Fasthand';
+        font-size: 1.3em;
+        padding : 2vh 10vw 5vh 10vw;
+    }
+    
+    label {
+        padding-bottom: 5vh;
+    }
+    
+    #photoCredits {
+        position: absolute;
+        bottom: 0px;
+        color: white;
+    }
+    
+    #right {
+        flex: 0;
+    }
+    
+    #typeAgain {
+        display: none;
+    }
+    
+    #validation {
+        position: absolute;
+        top: 50vh;
+        left: 55vw;
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (min-width: 1100px) {
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #banner {
+        /* margin-top: 20vh; */
+        background-color: rgb(255, 255, 255, 0.3);
+        text-align: center;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        position: absolute;
+        left: 0;
+        width: 35vw;
+        display: flex;  
+        align-items: center;
+    }
+
+    #banner span {
+        margin: 0;
+        padding: 0;
+        flex: 1;
+    }
+
+    button {
+        width: 15vw;
+        height: 6vh;
+        border-radius: 8px;
+        border: 2px solid;
+        background-color: #002244;
+        color: white;
+        font-size: 1.1em;
+    }
+
+    #form {
+        display: flex;
+        padding-left: 15vw;
+        gap: 5vw;
+        width: 100%;
+        min-height: 40vh;
+        font-family: 'Quicksand';
+    }
+
+    form {
+        padding-top: 2vh;
+    }
+    
+    h1 {
+        font-family: 'Quicksand';
+    }
+
+    input {
+        height: 3vh;
+        width: 15vw;
+        margin-top: 1vh;
+        display: block;
+        border-radius: 5px;
+        border: solid 1px;
+    }
+
+    input:focus {
+        transform: scale(1.05);
+        border: solid 2px;
+    }
+
+    #introduction {
+        font-family: 'Fasthand';
+        font-size: 1.8em;
+        background: linear-gradient(to left, rgb(185, 217, 235), white);
+        padding: 3vh 15vw 3vh 15vw;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 35vw;
+        height: 100vh;
+        background-image: url('shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg');
+        background-size: cover;
+        text-align: center;
+    }
+
+    #photoCredits {
+        background-color: rgb(255, 255, 255, 0.3);
+        font-size: 1.1em;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: inherit;
+    }
+
+    #right {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 65vw;
+    }
+
+    #right h3 {
+        padding-left: 15vw;
+        font-family: 'Quicksand';
+        text-decoration: underline;
+    }
+
+
+    .typeAgain {
+        font-size: 0.9em;
+        visibility: hidden;
+    }
+
+    .message {
+        visibility: visible;
+    }
+
+    #validation {
+        display: flex;
+        flex-direction: column;
+        padding: 5vh 0 5vh 5vw;
+        background: linear-gradient(to left, rgb(185, 217, 235), white);
+        width: 100%;
+        padding: 5vh 15vw 15vh 15vw;
+    }
+
+    #validation span {
+        padding-top: 5vh;
+    }
+    
+}
+
