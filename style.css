@@ -4,7 +4,6 @@
 html {
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
 
@@ -13,82 +12,144 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden;
 }
 
-img {
-    width: 10vw;
-    height: 10vh;
-}
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 610px) and (min-width: 300px) {
+    
     body {
         display: flex;
         background-image: url('shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg');
-        background-size: cover;       
+        background-size: 120%;
         flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: wheat;
+        overflow-x: hidden;
+    }
+    
+    
+    #banner {
+        flex: 0;
+        display: inline-block;
+        font-family: 'Fasthand', 'Comic Sans MS';
+        font-size: 1.2em;
+        justify-content: center;
+        /* align-items: center; */
+    }
+    
+    #banner h1 {
+        opacity: 1;
+    }
+
+    button {
+        max-width: 30vw;
+        height: 6vh;
+        border-radius: 5px;
+        border: none;
+    }
+
+    #form {
+        flex: 1;
+        align-items: center;
         justify-content: center;
     }
-    
-    body > div {
-        width: 100%;
+
+
+
+    h3 {
+        flex: 0;
+        box-sizing: border-box;
     }
     
-    
-    #left #banner {
-        font-family: 'Fasthand', 'Comic Sans MS';
-        font-size: 2em;
+    #introduction {
+        flex: 1;
+        font-size: 1.3em;
     }
-    
-    #validation button {
-        width: 20vw;
-        height: 10vh;
+
+    img {
+        max-width: 10vw;
+        max-height: auto;
     }
-    
+
+    input {
+        display: block;
+    }
+
+    .message {
+        visibility: visible;
+        font-size: 0.9em;
+        color: red;
+    }
+
     #photoCredits {
         position: absolute;
         bottom: 0;
         color: white;
     }
-    
-    input {
-        display: block;
-        height: 5vh;
+
+    .typeAgain {
+        font-size: 0.9em;
+        visibility: hidden;
     }
+
+    #validation {
+        padding-top: 8vh;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #right, #left {
+        padding: 0 10vw 0 10vw;
+
+    }
+
 }
 
 
-@media screen and (max-width: 1100px) and (min-width: 500px){
-    
+@media screen and (max-width: 1100px) and (min-width: 610px){
+    html {
+        overflow: hidden;
+    }
+
     body {
         margin-top: 5vh;
         background-image: url('shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg');
-        background-size: 150%;
+        background-size: 130%;
         font-size: 1.3em;
         margin: auto;
         color: white;
         overflow: hidden;
+
     }  
     
     #banner {
+        display: flex;
+        padding-left: 10vw;
         background-color: white;
         opacity: 0.4;
         color: black;
         width: 100vw;
+        /* background-color: rgb(255, 255, 255, 0.3); */
 
     }
-    
-    #banner h3 {
+
+    #banner span {
+        margin: 0;
+        padding: 0;
+        flex: 1;
+        justify-self: flex-start;
+    }
+
+    #banner h1 {
         opacity: 1;
         display: inline-block;
-        position: relative;
-        left: 50vw;
         margin: auto;
     }
     
     button {
-        width: 12vw;
-        height: 8vh;
+        width: 15vw;
+        height: 6vh;
         border-radius: 5px;
         border: none;
     }
@@ -110,19 +171,25 @@ img {
     
     input {
         display: block;
-        height: 5vh;
+        height: 3vh;
     }
     
     #introduction {
         font-family: 'Fasthand';
         font-size: 1.3em;
-        padding : 2vh 10vw 5vh 10vw;
+        padding : 2vh 10vw 2vh 10vw;
     }
     
     label {
         padding-bottom: 5vh;
     }
     
+    .message {
+        visibility: visible;
+        font-size: 0.9em;
+        color: red;
+    }
+
     #photoCredits {
         position: absolute;
         bottom: 0px;
@@ -133,24 +200,39 @@ img {
         flex: 0;
     }
     
-    #typeAgain {
-        display: none;
+    #right h3 {
+        padding-left: 10vw;
+        font-family: 'Quicksand';
+        text-decoration: underline;
     }
-    
+
+    .typeAgain {
+        font-size: 0.9em;
+        visibility: hidden;
+    }
+ 
     #validation {
-        position: absolute;
-        top: 50vh;
-        left: 55vw;
         display: flex;
         flex-direction: column;
+        padding-left: 10vw;
+        padding-top: 5vh;
+    }
+
+    #validation span {
+        padding-top: 3vh;
     }
     
 }
 
 @media screen and (min-width: 1100px) {
+    html {
+        overflow: hidden;
+    }
+    
     body {
         display: flex;
         flex-direction: row;
+        overflow: hidden;
     }
 
     #banner {
@@ -180,19 +262,18 @@ img {
         background-color: #002244;
         color: white;
         font-size: 1.1em;
+        box-shadow: 0 2px 2px grey;
+        font-weight: bold;
     }
 
     #form {
         display: flex;
-        padding-left: 15vw;
+        padding: 3vh 0 3vh 15vw;
         gap: 5vw;
         width: 100%;
-        min-height: 40vh;
+        /* min-height: 40vh; */
         font-family: 'Quicksand';
-    }
-
-    form {
-        padding-top: 2vh;
+        align-items: center;
     }
     
     h1 {
@@ -209,17 +290,21 @@ img {
     }
 
     input:focus {
-        transform: scale(1.05);
-        border: solid 2px;
+        transform: scale(1.03);
     }
 
     #introduction {
         font-family: 'Fasthand';
         font-size: 1.8em;
         background: linear-gradient(to left, rgb(185, 217, 235), white);
-        padding: 3vh 15vw 3vh 15vw;
+        padding: 5vh 15vw 5vh 15vw;
         width: 100%;
         box-sizing: border-box;
+    }
+
+    img {
+        width: 15vw;
+        height: 15vh;
     }
 
     #left {
@@ -235,11 +320,13 @@ img {
 
     #photoCredits {
         background-color: rgb(255, 255, 255, 0.3);
-        font-size: 1.1em;
+        /* font-size: 1.1em; */
         position: absolute;
         bottom: 0;
         left: 0;
         width: inherit;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     #right {
@@ -263,6 +350,8 @@ img {
 
     .message {
         visibility: visible;
+        font-size: 0.9em;
+        color: red;
     }
 
     #validation {
@@ -271,11 +360,12 @@ img {
         padding: 5vh 0 5vh 5vw;
         background: linear-gradient(to left, rgb(185, 217, 235), white);
         width: 100%;
-        padding: 5vh 15vw 15vh 15vw;
+        padding: 5vh 15vw 100% 15vw;
     }
 
     #validation span {
         padding-top: 5vh;
+        letter-spacing: 0.05em;
     }
     
 }

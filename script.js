@@ -4,16 +4,20 @@ const introduction = document.getElementById('introduction');
 const banner = document.getElementById('banner'); 
 const forms = document.getElementById('form');
 const inputBoxes = document.querySelectorAll('input');
+const submit = document.querySelector('button');
+let inputTarget;
+
 document.addEventListener('keydown', checkInput);
 document.addEventListener('input', whichInput);
 window.addEventListener('load', first);
+submit.addEventListener('click', buttonSubmit);
 
 function first(){
     let introBottom = introduction.getBoundingClientRect().bottom;
     banner.style.top = introBottom + 'px';
 }
 
-let inputTarget;
+
 
 function whichInput(e) {
 
@@ -49,3 +53,6 @@ function checkInput(input) {
 
 }
 
+function buttonSubmit() {
+    console.log('ok')
+}
