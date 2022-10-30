@@ -4,6 +4,7 @@
 html {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 
@@ -14,15 +15,13 @@ body {
     width: 100%;
 }
 
-@media screen and (max-width: 610px) and (min-width: 300px) {
+@media screen and (max-device-width: 610px) and (min-device-width: 300px) {
     
     body {
         display: flex;
         background-image: url('shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg');
-        background-size: 120%;
+        background-size: cover;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
         color: wheat;
         overflow-x: hidden;
     }
@@ -30,22 +29,25 @@ body {
     
     #banner {
         flex: 0;
-        display: inline-block;
+        display: flex;
+        gap: 5vw;
         font-family: 'Fasthand', 'Comic Sans MS';
-        font-size: 1.2em;
-        justify-content: center;
         /* align-items: center; */
+        font-size: 3em;
+
     }
     
-    #banner h1 {
+    h1 {
         opacity: 1;
     }
 
     button {
-        max-width: 30vw;
-        height: 6vh;
-        border-radius: 5px;
+        width: 40vw;
+        height: 10vh;
+        border-radius: 10px;
         border: none;
+        font-size: 1em;
+        align-self: center;
     }
 
     #form {
@@ -54,16 +56,16 @@ body {
         justify-content: center;
     }
 
-
-
     h3 {
         flex: 0;
         box-sizing: border-box;
+        font-size: 2em;
     }
     
     #introduction {
         flex: 1;
-        font-size: 1.3em;
+        font-size: 3em;
+        text-shadow: 1em 1em 1em beige;
     }
 
     img {
@@ -73,16 +75,24 @@ body {
 
     input {
         display: block;
+        height: 8vh;
+        width: 100%;
+        opacity: 0.5;
+        font-size: 2.8em;
+        border-radius: 10px;
+    }
+    
+    label {
+        font-size: 2.8em;
     }
 
     .message {
         visibility: visible;
-        font-size: 0.9em;
-        color: red;
+        font-size: 1.8em;
+        color: black;
     }
 
     #photoCredits {
-        position: absolute;
         bottom: 0;
         color: white;
     }
@@ -97,91 +107,94 @@ body {
         flex: 1;
         display: flex;
         flex-direction: column;
+        font-size: 2em;
+    }
+
+    #validation span {
+        margin-top: 3vh;
+        margin-bottom: 2vh;
+        font-size: 1.5em;
     }
 
     #right, #left {
         padding: 0 10vw 0 10vw;
-
     }
 
 }
 
 
-@media screen and (max-width: 1100px) and (min-width: 610px){
+@media screen and (max-device-width: 1100px) and (min-device-width: 610px){
     html {
         overflow: hidden;
     }
 
     body {
         margin-top: 5vh;
-        background-image: url('shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg');
-        background-size: 130%;
+        background: url('shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg'), rgba(255, 255, 255, 0.3);
+        background-repeat: no-repeat, no-repeat;
+        background-size: 130%, 100%;
+        /* background-size: 130%; */
         font-size: 1.3em;
-        margin: auto;
-        color: white;
+        /* margin: auto; */
+        color: black;
         overflow: hidden;
-
     }  
     
     #banner {
         display: flex;
         padding-left: 10vw;
-        background-color: white;
-        opacity: 0.4;
-        color: black;
-        width: 100vw;
-        /* background-color: rgb(255, 255, 255, 0.3); */
-
+        font-size: 2em;
     }
 
     #banner span {
         margin: 0;
         padding: 0;
         flex: 1;
-        justify-self: flex-start;
     }
 
     #banner h1 {
-        opacity: 1;
         display: inline-block;
         margin: auto;
     }
     
     button {
-        width: 15vw;
+        width: 20vw;
         height: 6vh;
         border-radius: 5px;
         border: none;
+        font-size: 1.2em;
     }
     
     #form {
         padding-left: 10vw;
         gap: 10vh;
         display: flex;
+        width: 100%;
     }
     
     img {
-        opacity: 1;
         width: 15vw;
         height: 15vh;
-        margin: 0;
-        padding: 0;
-        left: 0;
     }
     
     input {
         display: block;
         height: 3vh;
+        width: 22vw;
+        opacity: 0.6;
     }
     
     #introduction {
         font-family: 'Fasthand';
-        font-size: 1.3em;
+        font-size: 2em;
         padding : 2vh 10vw 2vh 10vw;
+        color: black;
     }
     
     label {
         padding-bottom: 5vh;
+        font-size: 1.5em;
+        font-family: 'Quicksand';
     }
     
     .message {
@@ -220,6 +233,7 @@ body {
 
     #validation span {
         padding-top: 3vh;
+        font-size: 1.3em;
     }
     
 }
@@ -295,7 +309,7 @@ body {
 
     #introduction {
         font-family: 'Fasthand';
-        font-size: 1.8em;
+        font-size: 2em;
         background: linear-gradient(to left, rgb(185, 217, 235), white);
         padding: 5vh 15vw 5vh 15vw;
         width: 100%;
@@ -369,4 +383,3 @@ body {
     }
     
 }
-
