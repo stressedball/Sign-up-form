@@ -16,7 +16,11 @@ body {
     width: 100%;
 }
 
-@media screen and (max-device-width: 610px) and (min-device-width: 300px) {
+.invalid {
+    border: 3px solid red;
+}
+
+@media screen and (max-device-width: 610px) and (min-device-width: 200px) {
     html {
         background-image: url('shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg');
         background-size: auto;
@@ -84,7 +88,7 @@ body {
 
     input {
         display: block;
-        height: 8vh;
+        height: 5vh;
         width: 100%;
         opacity: 0.5;
         font-size: 2.8em;
@@ -96,9 +100,8 @@ body {
     }
 
     .message {
-        visibility: visible;
         font-size: 1.8em;
-        color: black;
+        color: white;
     }
 
     #photoCredits {
@@ -107,7 +110,7 @@ body {
     }
 
     .typeAgain {
-        font-size: 0.9em;
+        font-size: 1.1em;
         visibility: hidden;
     }
 
@@ -138,8 +141,6 @@ body {
         background:  url('shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg') ;
         background-size: 100%;
     }    
-    
-
 
     body {
         background-color: rgba(255, 255, 255, 0.123);
@@ -194,6 +195,7 @@ body {
         width: 30vw;
         opacity: 0.6;
         border-radius: 10px;
+        font-size: 1.2em;
     }
     
     #introduction {
@@ -262,7 +264,6 @@ body {
     }
 
     #banner {
-        /* margin-top: 20vh; */
         background-color: rgb(255, 255, 255, 0.3);
         text-align: center;
         padding-top: 5vh;
@@ -297,7 +298,6 @@ body {
         padding: 3vh 0 3vh 15vw;
         gap: 5vw;
         width: 100%;
-        /* min-height: 40vh; */
         font-family: 'Quicksand';
         align-items: center;
     }
@@ -347,7 +347,6 @@ body {
 
     #photoCredits {
         background-color: rgb(255, 255, 255, 0.3);
-        /* font-size: 1.1em; */
         position: absolute;
         bottom: 0;
         left: 0;

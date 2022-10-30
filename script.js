@@ -34,11 +34,21 @@ function whichInput(e) {
 
     if (e.target.id === 'email') {
         if (!e.target.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)) {
-            inputTarget.style.visibility = 'visible';
-            return;
+            inputTarget.classList.remove('typeAgain')
+            inputTarget.classList.add('message');
         } else {
-            inputTarget.style.visibility = 'hidden';
-            return;
+            inputTarget.classList.remove('message')
+            inputTarget.classList.add('typeAgain');
+        }
+    }
+
+    if (e.target.id === 'phoneNumber') {
+        if (!e.target.value.match(/[0-9]/)) {
+            inputTarget.classList.remove('typeAgain')
+            inputTarget.classList.add('message');
+        } else {
+            inputTarget.classList.remove('message')
+            inputTarget.classList.add('typeAgain');
         }
     }
 
@@ -49,7 +59,7 @@ function buttonSubmit() {
     
     let allInputs = document.querySelectorAll('input');
     for (let eachInput of allInputs) {
-        if (eachInput.value === "") {
+        if (eachInput.value.length === 0) {
             alert('Please fill all informations');
             return;
         }
@@ -58,8 +68,13 @@ function buttonSubmit() {
     let password = document.querySelector('input#password');
     let confirmPassword = document.querySelector('input#validPassword'); 
     if (password.value !== confirmPassword.value) {
+        password.classList.add('invalid');
+        confirmPassword.classList.add('invalid');
         alert('Passwords don\'t match');
         return;
+    } else {
+        password.classList.remove('invalid');
+        confirmPassword.classList.remove('invalid');
     }
 
     let firstName = document.querySelector('input#firstName');
@@ -67,5 +82,5 @@ function buttonSubmit() {
     let email = document.querySelector('input#email');
     let phoneNumber = document.querySelector('input#phoneNumber');
     alert('Thanks for subscribing!\n');
-    alert(`Greetings ${firstName.value} ${lastName.value}.\n Your email adress is ${email.value} and phone number is ${phoneNumber.value}`);
+    alert(`Greetings ${firstName.value} ${lastName.value}.\nYour email adress is ${email.value} and phone number is ${phoneNumber.value}`);
 }
