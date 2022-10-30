@@ -7,7 +7,6 @@ const inputBoxes = document.querySelectorAll('input');
 const submit = document.querySelector('button');
 let inputTarget;
 
-document.addEventListener('keydown', checkInput);
 document.addEventListener('input', whichInput);
 window.addEventListener('load', first);
 submit.addEventListener('click', buttonSubmit);
@@ -16,7 +15,6 @@ function first(){
     let introBottom = introduction.getBoundingClientRect().bottom;
     banner.style.top = introBottom + 'px';
 }
-
 
 
 function whichInput(e) {
@@ -34,8 +32,6 @@ function whichInput(e) {
         return;
     }
 
-
-
     if (e.target.id === 'email') {
         if (!e.target.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)) {
             inputTarget.style.visibility = 'visible';
@@ -49,10 +45,27 @@ function whichInput(e) {
 
 }
 
-function checkInput(input) {
-
-}
-
 function buttonSubmit() {
-    console.log('ok')
+    
+    let allInputs = document.querySelectorAll('input');
+    for (let eachInput of allInputs) {
+        if (eachInput.value === "") {
+            alert('Please fill all informations');
+            return;
+        }
+    }
+
+    let password = document.querySelector('input#password');
+    let confirmPassword = document.querySelector('input#validPassword'); 
+    if (password.value !== confirmPassword.value) {
+        alert('Passwords don\'t match');
+        return;
+    }
+
+    let firstName = document.querySelector('input#firstName');
+    let lastName = document.querySelector('input#lastName');
+    let email = document.querySelector('input#email');
+    let phoneNumber = document.querySelector('input#phoneNumber');
+    alert('Thanks for subscribing!\n');
+    alert(`Greetings ${firstName.value} ${lastName.value}.\n Your email adress is ${email.value} and phone number is ${phoneNumber.value}`);
 }

@@ -5,6 +5,7 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
 }
 
 
@@ -16,14 +17,21 @@ body {
 }
 
 @media screen and (max-device-width: 610px) and (min-device-width: 300px) {
-    
+    html {
+        background-image: url('shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg');
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
     body {
         display: flex;
-        background-image: url('shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg');
-        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.473);
         flex-direction: column;
-        color: wheat;
+        color: rgb(217, 219, 107);
         overflow-x: hidden;
+        height: auto !important;
+        min-height: 100%;
     }
     
     
@@ -32,13 +40,11 @@ body {
         display: flex;
         gap: 5vw;
         font-family: 'Fasthand', 'Comic Sans MS';
-        /* align-items: center; */
         font-size: 3em;
-
     }
     
     h1 {
-        opacity: 1;
+        font-size: 3em;
     }
 
     button {
@@ -46,10 +52,14 @@ body {
         height: 10vh;
         border-radius: 10px;
         border: none;
-        font-size: 1em;
+        font-size: 1.1em;
         align-self: center;
+        font-weight: bold;
+        background-color: #041E42;
+        opacity: 0.8;
+        color: white;
     }
-
+    
     #form {
         flex: 1;
         align-items: center;
@@ -64,12 +74,11 @@ body {
     
     #introduction {
         flex: 1;
-        font-size: 3em;
-        text-shadow: 1em 1em 1em beige;
+        font-size: 3.5em;
     }
 
     img {
-        max-width: 10vw;
+        max-width: 15vw;
         max-height: auto;
     }
 
@@ -126,19 +135,19 @@ body {
 @media screen and (max-device-width: 1100px) and (min-device-width: 610px){
     html {
         overflow: hidden;
-    }
+        background:  url('shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg') ;
+        background-size: 100%;
+    }    
+    
+
 
     body {
-        margin-top: 5vh;
-        background: url('shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg'), rgba(255, 255, 255, 0.3);
-        background-repeat: no-repeat, no-repeat;
-        background-size: 130%, 100%;
-        /* background-size: 130%; */
+        background-color: rgba(255, 255, 255, 0.123);
         font-size: 1.3em;
-        /* margin: auto; */
         color: black;
         overflow: hidden;
     }  
+
     
     #banner {
         display: flex;
@@ -160,9 +169,11 @@ body {
     button {
         width: 20vw;
         height: 6vh;
-        border-radius: 5px;
-        border: none;
-        font-size: 1.2em;
+        border-radius: 8px;
+        background-color: #002244;
+        color: white;
+        font-size: 1.1em;
+        font-weight: bold;
     }
     
     #form {
@@ -180,8 +191,9 @@ body {
     input {
         display: block;
         height: 3vh;
-        width: 22vw;
+        width: 30vw;
         opacity: 0.6;
+        border-radius: 10px;
     }
     
     #introduction {
@@ -275,7 +287,7 @@ body {
         border: 2px solid;
         background-color: #002244;
         color: white;
-        font-size: 1.1em;
+        font-size: 1.4em;
         box-shadow: 0 2px 2px grey;
         font-weight: bold;
     }
@@ -301,6 +313,7 @@ body {
         display: block;
         border-radius: 5px;
         border: solid 1px;
+        font-size: 1.2em;
     }
 
     input:focus {
@@ -380,6 +393,7 @@ body {
     #validation span {
         padding-top: 5vh;
         letter-spacing: 0.05em;
+        font-size: 1.5em;
     }
     
 }
