@@ -6,7 +6,7 @@
     <script src='script.js' defer></script>
     <title>Title</title>
 </head>
-<body class="layer">
+<body>
     <div id="left">
         <div id="banner">
             <img src="sea-waves-svgrepo-com.svg" alt="waves">
@@ -18,41 +18,42 @@
         <div id="introduction"><p>This is a demonstration for showcasing an account creation. It doesn't do much but you can still try it :)</p></div>
         <h3>Please enter your credentials</h3>
         <div id="form">
-            <div id="formRight">
+            <div>              
                 <form>
                     <label for='firstName'>First Name</label>
                     <input type="text" id="firstName" minlength="2" required>
                     <span class="typeAgain">Please enter a valid name</span>
                 </form>   
                 <form>
+                    <label for='lastName'>Last Name</label>
+                    <input type="text" id="lastName" minlength="2" required>
+                    <span class="typeAgain">Please enter a valid name</span>
+                </form>  
+            </div>
+            <div>
+                <form>
                     <label for='email'>Email</label>
                     <input type="email" id="email" required>
                     <span class="typeAgain">Please enter a valid email</span>
                 </form> 
                 <form>
-                    <label for='password'>Password</label>
-                    <input type="password" id="password" required>
-                    <span class="typeAgain">Please enter a valid name</span>
-                </form> 
-            </div>
-            <div id="formLeft">
-                <form>
-                    <label for='lastName'>Last Name</label>
-                    <input type="text" id="lastName" minlength="2" required>
-                    <span class="typeAgain">Please enter a valid name</span>
-                </form>   
-                <form>
                     <label for='phoneNumber'>Phone number</label>
                     <input type="number" id="phoneNumber" minlength="6" required>
                     <span class="typeAgain">Please enter a valid number</span>
+                </form> 
+            </div>
+            <div>
+                <form>
+                    <label for='password'>Password</label>
+                    <input type="password" id="password" required>
+                    <span class="typeAgain">Please enter a valid name</span>
                 </form> 
                 <form>
                     <label for='validPassword'>Confirm password</label>
                     <input type="password" id="validPassword" required>
                     <span class="typeAgain">Passwords don't match</span>
                 </form> 
-            </div>
-        </div>        
+            </div>       
         <div id="validation">
             <button>Create account</button>
             <span>Already have an account? <a href='ok'>Log in.</a></span>

@@ -179,8 +179,16 @@ body {
     
     #form {
         padding-left: 10vw;
-        gap: 10vh;
+        gap: 3vh;
         display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #form div {
+        display: flex;
+        flex-direction: row;
+        gap: 5vw;
         width: 100%;
     }
     
@@ -291,15 +299,20 @@ body {
         font-size: 1.4em;
         box-shadow: 0 2px 2px grey;
         font-weight: bold;
+        margin-top: 5vh;
     }
 
     #form {
-        display: flex;
-        padding: 3vh 0 3vh 15vw;
-        gap: 5vw;
         width: 100%;
         font-family: 'Quicksand';
         align-items: center;
+    }
+
+    #form div {
+        display: flex;
+        gap: 5vw;
+        padding: 1vh 0 1vh 15vw;
+        font-size: 1.2em;
     }
     
     h1 {
@@ -322,7 +335,7 @@ body {
 
     #introduction {
         font-family: 'Fasthand';
-        font-size: 2em;
+        font-size: 2.5em;
         background: linear-gradient(to left, rgb(185, 217, 235), white);
         padding: 5vh 15vw 5vh 15vw;
         width: 100%;
@@ -366,6 +379,7 @@ body {
         padding-left: 15vw;
         font-family: 'Quicksand';
         text-decoration: underline;
+        font-size: 1.5em;
     }
 
 
@@ -383,14 +397,13 @@ body {
     #validation {
         display: flex;
         flex-direction: column;
-        padding: 5vh 0 5vh 5vw;
+        justify-content: center;
         background: linear-gradient(to left, rgb(185, 217, 235), white);
         width: 100%;
-        padding: 5vh 15vw 100% 15vw;
     }
 
     #validation span {
-        padding-top: 5vh;
+        padding-bottom: 100%;
         letter-spacing: 0.05em;
         font-size: 1.5em;
     }
